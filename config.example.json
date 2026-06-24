@@ -1,6 +1,6 @@
 {
-  "empresa": "Caçambas Diadema Express",
-  "whatsappNumero": "5511966661234",
+  "empresa": "Express Caçambas",
+  "whatsappNumero": "5511982557706",
   "whatsappMensagemPadrao": "Olá! Quero um orçamento de caçamba em Diadema.",
   "regiaoAtendimento": [
     "Centro",
@@ -11,7 +11,8 @@
     "Piraporinha",
     "Serraria"
   ],
-  "telefoneExibicao": "(11) 96666-1234",
+  "telefoneExibicao": "(11) 98255-7706",
   "n8nWebhookUrl": "https://SEU-N8N-AQUI/webhook/whatsapp-click",
-  "googleSearchConsoleSiteUrl": "https://seudominio.com.br/"
+  "googleSearchConsoleSiteUrl": "https://seudominio.com.br/",
+  "googleAccountEmail": "juniorsouzah555@gmail.com"
 }

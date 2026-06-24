@@ -1,4 +1,4 @@
-# Caçambas Diadema Express — Landing Page
+# Express Caçambas — Landing Page
 
 Landing page estática focada em conversão via WhatsApp para aluguel de caçambas em Diadema.
 
@@ -7,17 +7,16 @@ Landing page estática focada em conversão via WhatsApp para aluguel de caçamb
 - `index.html` — página única, sem framework, otimizada para Core Web Vitals.
 - `styles.css` — estilos não-críticos, carregados de forma assíncrona.
 - `script.js` — tracking de clique no botão de WhatsApp (não bloqueia a navegação).
-- `config.example.json` — dados de negócio centralizados (telefone, nome, bairros). **Os dados atuais no HTML são fictícios** — troque antes de publicar oficialmente.
+- `config.example.json` — dados de negócio centralizados (telefone, nome, bairros). **Dados reais já aplicados**: empresa "Express Caçambas", WhatsApp (11) 98255-7706. Bairros e depoimentos ainda são genéricos/fictícios.
 - `robots.txt` / `sitemap.xml` — SEO técnico.
 - `vercel.json` — headers de cache e segurança.
 - `.github/workflows/seo-report.yml` + `scripts/gsc-report.js` — robô semanal de SEO (ver abaixo).
 
 ## Antes de publicar oficialmente
 
-1. Substituir no `index.html`:
-   - Número de WhatsApp (`5511966661234`) pelo número real, em todos os 3 botões.
-   - Nome da empresa, bairros atendidos, depoimentos (atualmente fictícios) e domínio (`seudominio.com.br`).
-2. Adicionar uma imagem real para `og-image.png` (compartilhamento em redes sociais).
+1. Número de WhatsApp e nome da empresa **já atualizados** no `index.html` (Express Caçambas, (11) 98255-7706).
+2. Ainda fictícios — revisar antes de ir ao ar: bairros atendidos, depoimentos, domínio (`seudominio.com.br`).
+3. Adicionar uma imagem real para `og-image.png` (compartilhamento em redes sociais).
 
 ## Tracking de cliques (sem custo, sem Meta)
 
@@ -36,9 +35,9 @@ Enquanto a URL não for configurada, o tracking é ignorado silenciosamente e o 
 
 Toda semana, uma Action consulta a API oficial e gratuita do Google Search Console e abre um **Pull Request** com um relatório de palavras-chave (cliques, impressões, posição) e sugestões de melhoria. **Nenhuma mudança é aplicada automaticamente** — você revisa e decide o que fazer.
 
-Setup manual (uma vez):
+Setup manual (uma vez), usando a conta Google `juniorsouzah555@gmail.com`:
 
-1. Crie um projeto gratuito no [Google Cloud Console](https://console.cloud.google.com/).
+1. Acesse o [Google Cloud Console](https://console.cloud.google.com/) com essa conta e crie (ou reaproveite) um projeto gratuito.
 2. Ative a **Search Console API**.
 3. Crie uma **Service Account** e gere uma chave JSON.
 4. No [Google Search Console](https://search.google.com/search-console), adicione o e-mail da service account como usuário com acesso de leitura.
