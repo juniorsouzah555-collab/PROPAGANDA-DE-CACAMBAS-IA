@@ -1,0 +1,48 @@
+name: Relatório Semanal de SEO (Google Search Console)
+
+on:
+  schedule:
+    # Toda segunda-feira às 08:00 UTC (05:00 horário de Brasília)
+    - cron: "0 8 * * 1"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  seo-report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Instalar dependências
+        run: npm install --no-save
+
+      - name: Buscar dados do Google Search Console e gerar relatório
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+          GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
+        run: |
+          node scripts/gsc-report.js
+
+      - name: Criar Pull Request com o relatório
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore(seo): relatório semanal do Search Console"
+          title: "Relatório SEO semanal — ${{ github.run_id }}"
+          body: |
+            Relatório automático gerado a partir do Google Search Console.
+
+            Este PR **não altera conteúdo automaticamente** — é apenas um relatório
+            com dados de posição, cliques e impressões, e sugestões de melhoria
+            para revisão manual antes de qualquer alteração no site.
+          branch: seo-report/${{ github.run_id }}
+          add-paths: |
+            reports/*.md

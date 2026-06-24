@@ -1,0 +1,12 @@
+{
+  "name": "propaganda-de-cacambas-ia",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Landing page de conversão para aluguel de caçambas em Diadema",
+  "scripts": {
+    "seo-report": "node scripts/gsc-report.js"
+  },
+  "dependencies": {
+    "googleapis": "^144.0.0"
+  }
+}
