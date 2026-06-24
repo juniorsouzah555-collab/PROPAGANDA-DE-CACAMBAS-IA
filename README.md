@@ -61,3 +61,13 @@ vercel --prod
 ## Monitoramento de concorrentes
 
 Não incluído nesta primeira versão (exigiria scraping de SERP, que viola os termos do Google, ou ferramentas pagas como SEMrush/Ahrefs). Pode ser adicionado depois como verificação simples de mudança de conteúdo em URLs de concorrentes específicas, se desejado.
+
+## Futuro: campanha paga (Google Ads)
+
+Hoje o robô só cuida de SEO orgânico (gratuito). Quando o negócio decidir investir em mídia paga, a plataforma escolhida é o **Google Ads** (alta intenção de compra para buscas como "aluguel caçamba Diadema").
+
+Não construído ainda de propósito — depende de itens que só existem quando a decisão for tomada:
+- Conta Google Ads criada e com cartão/orçamento cadastrado.
+- Uma API key (`Google Ads API` + OAuth de uma conta com acesso "Manager") gerada após a conta existir.
+
+Quando isso estiver pronto, dá pra estender o mesmo padrão de automação (GitHub Actions) para: ajustar lances, pausar anúncios com baixo desempenho, ou gerar relatório semanal de custo/conversão — sempre abrindo PR para revisão, nunca alterando campanha sozinho sem aprovação.
