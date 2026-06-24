@@ -20,7 +20,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "24"
 
       - name: Instalar dependências
         run: npm install --no-save
@@ -33,7 +33,7 @@ jobs:
           node scripts/gsc-report.js
 
       - name: Criar Pull Request com o relatório
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@v7
         with:
           commit-message: "chore(seo): relatório semanal do Search Console"
           title: "Relatório SEO semanal — ${{ github.run_id }}"
