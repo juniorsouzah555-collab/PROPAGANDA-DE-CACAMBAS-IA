@@ -7,7 +7,7 @@ Landing page estática focada em conversão via WhatsApp para aluguel de caçamb
 - `index.html` — página única, sem framework, otimizada para Core Web Vitals.
 - `styles.css` — estilos não-críticos, carregados de forma assíncrona.
 - `script.js` — tracking de clique no botão de WhatsApp (não bloqueia a navegação).
-- `config.example.json` — dados de negócio centralizados (telefone, nome, bairros). **Dados reais já aplicados**: empresa "Express Caçambas", WhatsApp (11) 98255-7706. Bairros e depoimentos ainda são genéricos/fictícios.
+- `config.example.json` — dados de negócio centralizados (telefone, nome, bairros). **Dados reais já aplicados**: empresa "Express Caçambas", WhatsApp (11) 98255-7706, telefone fixo (11) 5674-0305. Bairros ainda são genéricos.
 - `robots.txt` / `sitemap.xml` — SEO técnico.
 - `vercel.json` — headers de cache e segurança.
 - `.github/workflows/seo-report.yml` + `scripts/gsc-report.js` — robô semanal de SEO (ver abaixo).
@@ -15,7 +15,7 @@ Landing page estática focada em conversão via WhatsApp para aluguel de caçamb
 ## Antes de publicar oficialmente
 
 1. Número de WhatsApp e nome da empresa **já atualizados** no `index.html` (Express Caçambas, (11) 98255-7706).
-2. Ainda fictícios — revisar antes de ir ao ar: bairros atendidos, depoimentos, domínio (`seudominio.com.br`).
+2. Ainda fictícios — revisar antes de ir ao ar: bairros atendidos, domínio (`seudominio.com.br`).
 3. Adicionar uma imagem real para `og-image.png` (compartilhamento em redes sociais).
 
 ## Tracking de cliques (sem custo, sem Meta)
